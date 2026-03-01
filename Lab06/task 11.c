@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    float price, total = 0;
+    int choice;
+    do {
+        printf("Enter product price: ");
+        scanf("%f", &price);
+        total += price;
+        printf("Add another? (1=Yes, 0=No): ");
+        scanf("%d", &choice);
+    } while (choice == 1);
+    if (total > 5000) total *= 0.95; 
+    printf("Final payable amount: %.2f\n", total);
+    return 0;
+}
